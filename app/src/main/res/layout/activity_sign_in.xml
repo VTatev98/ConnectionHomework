@@ -11,7 +11,6 @@
 
     <ImageView
         android:id="@+id/iv_icon"
-        android:layout_marginTop="@dimen/image_view_margin_top"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,11 +84,12 @@
 
     <EditText
         android:id="@+id/et_password"
+        android:inputType="textPassword"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/button_margin_lr"
         android:layout_marginLeft="@dimen/button_margin_lr"
-        android:layout_marginBottom="@dimen/sign_in_margin_bottom"
+        android:layout_marginBottom="200dp"
         android:hint="Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -114,7 +114,6 @@
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
         app:layout_constraintRight_toLeftOf="@id/et_agree"
         app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
         app:layout_constraintTop_toBottomOf="@id/et_password"/>

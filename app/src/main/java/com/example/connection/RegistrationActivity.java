@@ -1,7 +1,5 @@
 package com.example.connection;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistrationActivity extends AppCompatActivity implements View.OnClickListener ,OnValidDataListener{
 
@@ -27,16 +27,18 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_sign_in);
+            setContentView(R.layout.activity_registration);
             etUsername = findViewById(R.id.et_username);
             etPass = findViewById(R.id.et_password);
             etRepeatePass = findViewById(R.id.et_repeat_password);
             btnSave = findViewById(R.id.btn_save);
+            checkBox = findViewById(R.id.check);
             tvCencel = findViewById(R.id.tv_cancel);
             btnSave.setOnClickListener(this);
             tvCencel.setOnClickListener(this);
             registrationPresenter = new ValidRegistrationPresenter(this);
-            checkBox = findViewById(R.id.check);
+
+
         }
 
         @Override

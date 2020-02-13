@@ -1,15 +1,14 @@
 package com.example.connection;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener,OnValidDataListener{
     private Button btnSignIn;
@@ -26,10 +25,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         etPass = findViewById(R.id.et_password);
         btnSignIn = findViewById(R.id.btn_sign_in);
         btnSignUp = findViewById(R.id.btn_sign_up);
-        btnSignIn.setOnClickListener(this);
-        btnSignUp.setOnClickListener(this);
         registrationPresenter = new ValidRegistrationPresenter(this);
         checkBox = findViewById(R.id.check);
+        btnSignIn.setOnClickListener(this);
+        btnSignUp.setOnClickListener(this);
+
     }
 
     @Override
@@ -37,9 +37,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()) {
 
             case R.id.btn_sign_in:
-                if(checkBox.isChecked()){
-                    registrationPresenter.isValidLogin(etUsername.getText().toString(), etPass.getText().toString());
-                           }
+                registrationPresenter.isValidLogin(etUsername.getText().toString(), etPass.getText().toString());
                 break;
             case R.id.btn_sign_up:
                 goToRegistrationActivity();

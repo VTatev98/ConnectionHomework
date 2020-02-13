@@ -8,7 +8,8 @@
     <dimen name="button_shape_radius">50dp</dimen>
     <dimen name="image_view_margin_top">60dp</dimen>
     <dimen name="button_margin_top">20dp</dimen>
-    <dimen name="reg_margin_bottom">220dp</dimen>
+    <dimen name="welcome_margin_top">400dp</dimen>
+    <dimen name="reg_margin_bottom">180dp</dimen>
     <dimen name="sign_in_margin_bottom">300dp</dimen>
     <dimen name="button_margin_bottom">140dp</dimen>
     <dimen name="button_margin_lr">35dp</dimen>

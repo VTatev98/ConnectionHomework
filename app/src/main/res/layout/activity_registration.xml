@@ -86,6 +86,7 @@
     <EditText
         android:id="@+id/et_password"
         android:layout_width="@dimen/button_width"
+        android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/button_margin_lr"
         android:layout_marginLeft="@dimen/button_margin_lr"
@@ -98,6 +99,7 @@
     ​
     <EditText
         android:id="@+id/et_repeat_password"
+        android:inputType="textPassword"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/regist_et_margin"
